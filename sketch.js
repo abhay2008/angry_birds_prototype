@@ -33,6 +33,7 @@ function setup() {
     boxes[i] = new Box(450, 300 - i * 75, 84, 100);
   }
    bird = new Bird(150, 300, 25);
+   //working
 
   slingshot = new SlingShot(150, 300, .body);
 
