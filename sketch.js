@@ -37,7 +37,7 @@ function setup() {
   }
   bird = new Bird(150, 300, 25);
 
-  slingshot = new SlingShot(150, 300, bird.body);
+  slingshot = new SlingShot(150, 300, .body);
 
   const mouse = Mouse.create(canvas.elt);
   const options = {
@@ -53,7 +53,7 @@ function setup() {
 function keyPressed() {
   if (key == ' ') {
     World.remove(world, bird.body);
-    bird = new Bird(150, 300, 25);
+     = new (150, 300, 25);
     slingshot.attach(bird.body);
   }
 }
