@@ -9,7 +9,7 @@ const {
 
 let ground;
 const boxes = [];
-let ;
+let bird;
 let world, engine;
 let mConstraint;
 let slingshot;
@@ -32,9 +32,9 @@ function setup() {
   for (let i = 0; i < 3; i++) {
     boxes[i] = new Box(450, 300 - i * 75, 84, 100);
   }
-   = new (150, 300, 25);
+  bird = new Bird(150, 300, 25);
 
-  slingshot = new SlingShot(150, 300, .body);
+  slingshot = new SlingShot(150, 300, bird.body);
 
   const mouse = Mouse.create(canvas.elt);
   const options = {
@@ -49,15 +49,15 @@ function setup() {
 
 function keyPressed() {
   if (key == ' ') {
-    World.remove(world, .body);
-     = new (150, 300, 25);
-    slingshot.attach(.body);
+    World.remove(world, bird.body);
+    bird = new Bird(150, 300, 25);
+    slingshot.attach(bird.body);
   }
 }
 
 function mouseReleased() {
   setTimeout(() => {
-    slingshot.();
+    slingshot.fly();
   }, 100);
 }
 
@@ -69,5 +69,5 @@ function draw() {
     box.show();
   }
   slingshot.show();
-  .show();
+  bird.show();
 }
