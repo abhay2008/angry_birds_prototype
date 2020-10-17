@@ -58,7 +58,7 @@ function keyPressed() {
 function mouseReleased() {
   setTimeout(() => {
     slingshot.();
-  }, 50);
+  }, 100);
 }
 
 function draw() {
