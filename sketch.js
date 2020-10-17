@@ -32,7 +32,7 @@ function setup() {
   for (let i = 0; i < 3; i++) {
     boxes[i] = new Box(450, 300 - i * 75, 84, 100);
   }
-   = new (150, 300, 25);
+   bird = new Bird(150, 300, 25);
 
   slingshot = new SlingShot(150, 300, .body);
 
