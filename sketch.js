@@ -18,10 +18,13 @@ let dotImg;
 let boxImg;
 let bkgImg;
 
+let hit;
+
 function preload() {
   dotImg = loadImage('dot.png');
   boxImg = loadImage('equals.png');
   bkgImg = loadImage('skyBackground.png');
+  hit = loadSound('die.mp3');
 }
 
 function setup() {
@@ -58,7 +61,8 @@ function keyPressed() {
 function mouseReleased() {
   setTimeout(() => {
     slingshot.fly();
-  }, 100);
+    hit.play();
+  }, 150);
 }
 
 function draw() {
